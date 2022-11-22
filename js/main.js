@@ -43,53 +43,21 @@ const images = [
     } 
 ];
 
-console.log(images)
+const slideContainer = document.getElementById('box');
 
-for (var i = 0; i < images.length; i++) {
-    document.getElementById("box1").src = images.src;
+for (let i = 0; i < images.length; i++) {
+   
+    let slide = 
+    `<div class="slide">
+        <img src="${images[i].image}" alt="">
+        <h3 class="title">${images[i].title}</h3>
+        <p class="txt">${images[i].text}</p>
+    </div>`
+
+    slideContainer.innerHTML = slide;
 }
-
-
-imgs();
-function imgs () {
-
-    for (let i = 0; i < images.length; i++) {
-
-        let boxImg = 
-
-         `<div class="container" id="output">
-            <section class="box" id="box1"> 
-                <img src="${images[i].image}" alt="">
-            </section>
-            <section class="txt" id="txtID"> 
-                <div id="title">${images[i].title}</div>
-                <div id="text">${images[i].text}</div>
-            </section>
-            <button type="button" class="btn btn-light btn-right">
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-        </div>`
-        
-        const container=document.querySelector(".container").innerHTML += boxImg
-
-    }
-}
-
-
-
-
-
-// JS PRIMO CAROSEL.
-
-// const imgArr  = [`img/01.webp`, `img/02.webp`,`img/03.webp`,`img/04.webp`,`img/05.webp`,];
-
-// const slide = document.getElementById("box1");
 
 // let active = 0;
-
-// for (let i = 0; i < imgArr.length; i++) {
-//     slide.innerHTML += `<img src="${imgArr[i]}" id="img-${i}" alt="" class="none">`
-// };
 
 // let box = document.querySelector(".box").classList.add("block");
 // let imgActive = document.getElementById("img-" + active);
@@ -107,3 +75,4 @@ function imgs () {
 // });
 
 // console.log(btnRight)
+
