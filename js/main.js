@@ -57,22 +57,22 @@ for (let i = 0; i < images.length; i++) {
     slideContainer.innerHTML = slide;
 }
 
-// let active = 0;
+let active = 0;
 
-// let box = document.querySelector(".box").classList.add("block");
-// let imgActive = document.getElementById("img-" + active);
-// imgActive.classList.add("block");
-// let btnRight = document.querySelector(".btn-right");
+let box = document.querySelector(".slide").classList.add("block");
+let imgActive = document.getElementById("slide" + active);
+slide.classList.add("block");
+let btnRight = document.querySelector(".btn-right");
 
-// btnRight.addEventListener("click" , function(){
+btnRight.addEventListener("click" , function(){
 
-//     active++
-//     if (active > ((imgArr.length) - 1)){
-//         active = 0}
-//         imgActive.classList.remove("block")
-//         imgActive = document.getElementById("img-" + active);
-//         imgActive.classList.add("block")
-// });
+    active++
+    if (active > ((images.length) - 1)){
+        active = 0}
+        imgActive.classList.remove("block")
+        imgActive = document.getElementById("img-" + active);
+        imgActive.classList.add("block")
+});
 
-// console.log(btnRight)
+console.log(btnRight)
 
