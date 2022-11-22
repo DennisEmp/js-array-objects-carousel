@@ -48,31 +48,31 @@ const slideContainer = document.getElementById('box');
 for (let i = 0; i < images.length; i++) {
    
     let slide = 
-    `<div class="slide">
+    `<div class="slide none">
         <img src="${images[i].image}" alt="">
         <h3 class="title">${images[i].title}</h3>
         <p class="txt">${images[i].text}</p>
     </div>`
 
-    slideContainer.innerHTML = slide;
+    slideContainer.innerHTML += slide;
 }
 
 let active = 0;
 
 let box = document.querySelector(".slide").classList.add("block");
-let imgActive = document.getElementById("slide" + active);
-slide.classList.add("block");
+
 let btnRight = document.querySelector(".btn-right");
 
 btnRight.addEventListener("click" , function(){
 
-    active++
-    if (active > ((images.length) - 1)){
-        active = 0}
-        imgActive.classList.remove("block")
-        imgActive = document.getElementById("img-" + active);
-        imgActive.classList.add("block")
+    if (active === images.length - 1){
+        active = 0
+    } else {
+        active ++
+    }
+
+    document.querySelector(".slide.block").classList.remove("block")
+    document.getElementsByClassName("slide")[active].classList.add("block")
 });
 
-console.log(btnRight)
 
