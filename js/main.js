@@ -11,9 +11,6 @@
 // Milestone 2:
 // Aggiungere il **ciclo infinito** del carosello. Ovvero se l’img attiva è la prima e l’utente clicca la freccia prev, l’img che deve attivarsi sarà l’ultima e viceversa per l’ultima img se l’utente clicca la freccia next.
 
-
-
-
 const images = [ 
     { 
         image: 'img/01.webp', 
@@ -45,3 +42,35 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.', 
     } 
 ];
+
+console.log(images)
+
+for (var i = 0; i < images.length; i++) {
+    document.getElementById("box1").src = images.src;
+}
+
+
+imgs();
+function imgs () {
+
+    for (let i = 0; i < images.length; i++) {
+
+        let boxImg = 
+
+         `<div class="container" id="output">
+            <section class="box" id="box1"> 
+                <img src="${images[i].image}" alt="">
+            </section>
+            <section class="txt" id="txtID"> 
+                <div id="title">${images[i].title}</div>
+                <div id="text">${images[i].text}</div>
+            </section>
+            <button type="button" class="btn btn-light btn-right">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>`
+        
+        const container=document.querySelector(".container").innerHTML += boxImg
+
+    }
+}
