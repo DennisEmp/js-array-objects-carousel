@@ -33,12 +33,20 @@ img{
     display: block;
 }
 
-.btn {
+.btn-right {
     border-radius: 20px;
     position: absolute;
     top: 50%;
     transform: translate(0,-50%);
     right: 355px;
+}
+
+.btn-left {
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: 1076px;
 }
 
 .slide {

@@ -75,4 +75,18 @@ btnRight.addEventListener("click" , function(){
     document.getElementsByClassName("slide")[active].classList.add("block")
 });
 
+let btnLeft = document.querySelector(".btn-left")
+
+btnLeft.addEventListener("click" , function(){
+
+    if (active === images.length - 1){
+        active = 5
+    } else {
+        active --
+    }
+
+    document.querySelector(".slide.block").classList.remove("block")
+    document.getElementsByClassName("slide")[active].classList.add("block")
+});
+
 
