@@ -63,7 +63,9 @@ let box = document.querySelector(".slide").classList.add("block");
 
 let btnRight = document.querySelector(".btn-right");
 
-btnRight.addEventListener("click" , function(){
+btnRight.addEventListener("click" , 
+
+function(){
 
     if (active === images.length - 1){
         active = 0
@@ -75,14 +77,17 @@ btnRight.addEventListener("click" , function(){
     document.getElementsByClassName("slide")[active].classList.add("block")
 });
 
+
 let btnLeft = document.querySelector(".btn-left")
 
-btnLeft.addEventListener("click" , function(){
+btnLeft.addEventListener("click" , 
 
-    if (active === images.length - 1){
-        active = 5
-    } else {
+function(){
+
+    if (active > 0){
         active --
+    } else {
+        active = images.length -1
     }
 
     document.querySelector(".slide.block").classList.remove("block")
